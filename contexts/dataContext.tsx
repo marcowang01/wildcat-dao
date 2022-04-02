@@ -106,13 +106,17 @@ export const useProviderData = () => {
 
   const loadBlockchainData = async () => {
     const web3 = window.web3;
-    const fundingDaoData = FundingDAO.networks["1639029018958"];
+    const fundingDaoData = FundingDAO.networks["5777"];
     if (fundingDaoData) {
       var fundingDaoContract = await new web3.eth.Contract(
         FundingDAO.abi,
         fundingDaoData.address
       );
-      setFundingDao(fundingDaoContract);
+
+      console.log(`contract : ${fundingDaoContract.address}`);
+
+      setFundingDao(fundingDaoContract);      
+
       setTimeout(async () => {
         var totalProposals = await fundingDaoContract.methods
           .getAllProposals()
@@ -162,7 +166,7 @@ export const useProviderData = () => {
           setCurrentBal("");
         }
         setLoading(false);
-      }, 500);
+      }, 10);
     } else {
       window.alert("TestNet not found");
     }
