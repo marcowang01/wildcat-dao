@@ -26,7 +26,7 @@ export const ProposalList = () => {
           <span className="text-lg font-bold mt-5 text-center">
             Sorry, you have no proposals yet. Create one{" "}
             <Link href="/create-proposal">
-              <a className="textx-blue-600 underline">now!</a>
+              <a className="textx-purple-600 underline">now!</a>
             </Link>
           </span>
         )}

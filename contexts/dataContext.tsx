@@ -86,7 +86,7 @@ export const useProviderData = () => {
 
   useEffect(() => {
     connect();
-  }, []);
+  }, [account]);
 
   const connect = async () => {
     if (window.ethereum) {
@@ -100,7 +100,9 @@ export const useProviderData = () => {
       return;
     }
     var allAccounts = await window.web3.eth.getAccounts();
+
     setAccount(allAccounts[0]);
+
     await loadBlockchainData();
   };
 
@@ -136,7 +138,7 @@ export const useProviderData = () => {
           from: account,
         });
 
-        console.log(`isMember`, isMember);
+        console.log(`isMember`, isMember, `from acc:`, account);
         setIsMember(isMember);
         if (isMember && !isStakeholder) {
           var memberBal = await fundingDaoContract.methods.getMemberBal().call({

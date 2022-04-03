@@ -33,11 +33,11 @@ export default function Home() {
       </Head>
       <Navbar />
       <main className="w-screen flex py-4 flex-grow justify-center">
-        <div className="w-1/3 border-2 border-blue-600 rounded-xl p-3 mt-10 h-full">
+        <div className="w-1/3 border-2 border-purple-600 rounded-xl p-3 mt-10 h-full">
           <div className="flex flex-col justify-center">
             <p className="my-2">
               Current Balance :{" "}
-              <span className="text-lg font-bold text-blue-600">
+              <span className="text-lg font-bold text-purple-600">
                 {currentBal} MATIC
               </span>
             </p>
@@ -51,7 +51,7 @@ export default function Home() {
               autoComplete="off"
             />
             <button
-              className="px-3 py-2 rounded-xl bg-blue-600 text-white"
+              className="px-3 py-2 rounded-xl bg-purple-600 text-white"
               onClick={() => {
                 createStakeholder(val).then(() => {
                   setVal("");

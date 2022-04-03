@@ -14,10 +14,10 @@ function Navbar() {
           <div className="">
             <Link href="/" passHref>
               <span className="font-semibold text-xl cursor-pointer">
-                FundingDAO
+                NorthwesternDAO
               </span>
             </Link>
-            <span className="text-xs bg-blue-500 text-white rounded-lg py-1 px-1 font-bold ml-2">
+            <span className="text-xs bg-purple-500 text-white rounded-lg py-1 px-1 font-bold ml-2">
               {!isMember && !isStakeholder
                 ? "Not a Member"
                 : isStakeholder
@@ -27,14 +27,18 @@ function Navbar() {
           </div>
 
           {account ? (
-            <div className="bg-green-500 px-6 py-2 rounded-md cursor-pointer">
+            <div className="bg-purple-500 px-6 py-2 rounded-md cursor-pointer"
+            onClick={() => {
+              connect();
+            }}
+            >
               <span className="text-lg text-white">
                 {account.substr(0, 10)}...
               </span>
             </div>
           ) : (
             <div
-              className="bg-green-500 px-6 py-2 rounded-md cursor-pointer"
+              className="bg-purple-500 px-6 py-2 rounded-md cursor-pointer"
               onClick={() => {
                 connect();
               }}
@@ -96,9 +100,9 @@ const TabButton = ({
   return (
     <Link href={url} passHref>
       <div
-        className={`h-full px-3 flex items-center border-b-2 font-semibold hover:border-blue-700 hover:text-blue-700 cursor-pointer ${
+        className={`h-full px-3 flex items-center border-b-2 font-semibold hover:border-purple-700 hover:text-purple-700 cursor-pointer ${
           isActive
-            ? "border-blue-700 text-blue-700 text-base font-semibold"
+            ? "border-purple-700 text-purple-700 text-base font-semibold"
             : "border-white text-gray-400 text-base"
         }`}
       >

@@ -15,6 +15,7 @@ export default function Home() {
       </div>
     );
   }
+
   if (!account) {
     return (
       <div className="h-screen w-screen flex justify-center items-center">
@@ -24,6 +25,7 @@ export default function Home() {
       </div>
     );
   }
+  
   return (
     <div className={styles.container}>
       <Head>

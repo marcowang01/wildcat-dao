@@ -31,20 +31,20 @@ export const ProposalCard: React.FC<Props> = ({ proposal, openModal }) => {
         }
       }}
     >
-      <div className="flex flex-col border-2 border-gray-300 rounded-lg p-3 hover:border-blue-700">
+      <div className="flex flex-col border-2 border-gray-300 rounded-lg p-3 hover:border-purple-700">
         <div className="flex flex-col">
           <span className="text-sm font-bold text-gray-500 inline-flex justify-between ">
             Proposal - #{parseInt(proposal.id) + 1}
             <span>
               Funding Amount -{" "}
-              <span className="text-blue-600">
+              <span className="text-purple-600">
                 {Web3.utils.fromWei(proposal.amount)} MATIC
               </span>
             </span>
           </span>
           <span className="text-lg font-bold inline-flex justify-between mt-2">
             {proposal.title}
-            <span className="text-xs bg-blue-500 text-white rounded-lg py-1 px-1 font-bold ml-2 h-6">
+            <span className="text-xs bg-purple-500 text-white rounded-lg py-1 px-1 font-bold ml-2 h-6">
               Voting Period
             </span>
           </span>
@@ -53,7 +53,7 @@ export const ProposalCard: React.FC<Props> = ({ proposal, openModal }) => {
           </span>
           <span className="text-sm">
             Proposer:{" "}
-            <span className="bg-gray-200 text-blue-500 00 p-1 rounded-lg">
+            <span className="bg-gray-200 text-purple-500 00 p-1 rounded-lg">
               {proposal.proposer}
             </span>
           </span>

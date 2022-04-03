@@ -113,7 +113,7 @@ export const VoteModal: React.FC<Props> = ({
                 <div className="my-5">
                   <p className="text-sm text-gray-500 line-clamp-5">
                     Proposer -{" "}
-                    <span className="bg-gray-200 text-blue-500 00 p-1 rounded-lg">
+                    <span className="bg-gray-200 text-purple-500 00 p-1 rounded-lg">
                       {proposal?.proposer}
                     </span>
                   </p>
@@ -123,7 +123,7 @@ export const VoteModal: React.FC<Props> = ({
                     <div className="mt-4">
                       <button
                         type="button"
-                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-green-900 bg-green-100 border border-transparent rounded-md hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-green-900 bg-green-100 border border-transparent rounded-md hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500"
                         onClick={async () => {
                           await vote(proposal?.id ?? "", true);
                           closeModal();
@@ -135,7 +135,7 @@ export const VoteModal: React.FC<Props> = ({
                     <div className="mt-4">
                       <button
                         type="button"
-                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-red-900 bg-red-100 border border-transparent rounded-md hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-red-900 bg-red-100 border border-transparent rounded-md hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500"
                         onClick={async () => {
                           await vote(proposal?.id ?? "", false);
                           closeModal();
