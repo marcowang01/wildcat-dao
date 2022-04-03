@@ -6,11 +6,11 @@ export const CreateMember = () => {
   const [val, setVal] = useState("");
   return (
     <main className="w-full flex flex-colpy-4 flex-grow max-w-5xl justify-center">
-      <div className="max-w-2xl border-2 border-blue-600 rounded-xl p-3 mt-10 h-full">
+      <div className="max-w-2xl border-2 border-purple-600 rounded-xl p-3 mt-10 h-full">
         <div className="flex flex-col justify-center">
           <span>You are not a member.</span>
           <p>
-            Add <strong>2 MATIC</strong> to become member and more than 2 MATIC
+            Add <strong>0.01 ETH</strong> to become member and more than 2 MATIC
             become a stakeholder
           </p>
           <input
@@ -23,7 +23,7 @@ export const CreateMember = () => {
             autoComplete="off"
           />
           <button
-            className="px-3 py-2 rounded-xl bg-blue-600 text-white"
+            className="px-3 py-2 rounded-xl bg-purple-600 text-white"
             onClick={() => {
               createStakeholder(val);
             }}

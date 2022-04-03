@@ -183,7 +183,7 @@ contract FundingDAO is ReentrancyGuard, AccessControl {
     {
         Proposal storage proposal = proposals[proposalId];
 
-        if (proposal.totalFundRaised <= proposal.amount) {
+        if (proposal.totalFundRaised < proposal.amount) {
             revert("Required funds are not met. Please provider funds.");
         }
         proposal.receiverAddress.transfer(proposal.totalFundRaised);
@@ -195,7 +195,7 @@ contract FundingDAO is ReentrancyGuard, AccessControl {
         uint256 amount = msg.value;
         if (!hasRole(STAKEHOLDER, msg.sender)) {
             uint256 total = members[msg.sender] + amount;
-            if (total >= 2 ether) {
+            if (total >= 0.01 ether) {
                 _setupRole(STAKEHOLDER, msg.sender);
                 _setupRole(MEMBER, msg.sender);
                 stakeholders[msg.sender] = total;
