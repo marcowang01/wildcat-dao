@@ -86,7 +86,7 @@ export const useProviderData = () => {
 
   useEffect(() => {
     connect();
-  }, []);
+  }, [account]);
 
   const connect = async () => {
     if (window.ethereum) {
@@ -100,7 +100,10 @@ export const useProviderData = () => {
       return;
     }
     var allAccounts = await window.web3.eth.getAccounts();
+    console.log("accounts", allAccounts);
+  
     setAccount(allAccounts[0]);
+    console.log("the account", account);
     await loadBlockchainData();
   };
 
@@ -112,10 +115,12 @@ export const useProviderData = () => {
         FundingDAO.abi,
         fundingDaoData.address
       );
+      console.log(`abi : ${FundingDAO.abi[0].name}`);
+      console.log(`data : ${fundingDaoData.address}`);
+      console.log(`contract : ${fundingDaoContract.options.address}`);
 
-      console.log(`contract : ${fundingDaoContract.address}`);
-
-      setFundingDao(fundingDaoContract);      
+      setFundingDao(fundingDaoContract);    
+       
 
       setTimeout(async () => {
         var totalProposals = await fundingDaoContract.methods

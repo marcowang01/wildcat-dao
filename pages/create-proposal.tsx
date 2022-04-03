@@ -52,7 +52,7 @@ export default function Home() {
       <Navbar />
       {isMember && (
         <main className="w-full flex flex-col py-4 flex-grow max-w-5xl items-center">
-          <div className="w-3/4 border-2 border-blue-600 rounded-xl p-3 mt-10">
+          <div className="w-3/4 border-2 border-purple-600 rounded-xl p-3 mt-10">
             <div className="flex flex-col justify-center">
               <span className="text-xl text-center">Create a new Proposal</span>
               <p className="mt-4">
@@ -104,7 +104,7 @@ export default function Home() {
                 />
 
                 <button
-                  className="mt-3 px-3 py-2 rounded-xl bg-blue-600 text-white"
+                  className="mt-3 px-3 py-2 rounded-xl bg-purple-600 text-white"
                   type="submit"
                 >
                   Create Proposal
