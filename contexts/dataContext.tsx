@@ -100,10 +100,9 @@ export const useProviderData = () => {
       return;
     }
     var allAccounts = await window.web3.eth.getAccounts();
-    console.log("accounts", allAccounts);
-  
+
     setAccount(allAccounts[0]);
-    console.log("the account", account);
+
     await loadBlockchainData();
   };
 
@@ -141,7 +140,7 @@ export const useProviderData = () => {
           from: account,
         });
 
-        console.log(`isMember`, isMember);
+        console.log(`isMember`, isMember, `from acc:`, account);
         setIsMember(isMember);
         if (isMember && !isStakeholder) {
           var memberBal = await fundingDaoContract.methods.getMemberBal().call({

@@ -88,7 +88,7 @@ export const AddFundsModal: React.FC<Props> = ({
                   <div className="flex flex-row justify-between mt-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center px-10 py-2 text-sm font text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 font-bold"
+                      className="inline-flex justify-center px-10 py-2 text-sm font text-purple-900 bg-purple-100 border border-transparent rounded-md hover:bg-purple-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500 font-bold"
                       onClick={async () => {
                         await provideFunds(id, amount);
                         setAmount("");
@@ -99,7 +99,7 @@ export const AddFundsModal: React.FC<Props> = ({
                     </button>
                     <button
                       type="button"
-                      className="inline-flex justify-center px-4 py-2 text-sm font-medium text-red-900 bg-red-100 border border-transparent rounded-md hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                      className="inline-flex justify-center px-4 py-2 text-sm font-medium text-red-900 bg-red-100 border border-transparent rounded-md hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500"
                       onClick={async () => {
                         closeModal();
                       }}

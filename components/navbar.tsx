@@ -14,7 +14,7 @@ function Navbar() {
           <div className="">
             <Link href="/" passHref>
               <span className="font-semibold text-xl cursor-pointer">
-                Wildcat DAO
+                NorthwesternDAO
               </span>
             </Link>
             <span className="text-xs bg-purple-500 text-white rounded-lg py-1 px-1 font-bold ml-2">

@@ -50,14 +50,14 @@ export const ProposalInvestmentCard: React.FC<Props> = ({
         )}
         fundingRaised={Web3.utils.fromWei(proposal.totalFundRaised)}
       />
-      <div className="flex flex-col border-2 border-gray-300 rounded-lg p-3 hover:border-blue-700">
+      <div className="flex flex-col border-2 border-gray-300 rounded-lg p-3 hover:border-purple-700">
         <div className="flex flex-col">
           <span className="text-sm font-bold text-gray-500 inline-flex justify-between ">
             Proposal - #{parseInt(proposal.id) + 1}
           </span>
           <span className="text-lg font-bold inline-flex justify-between mt-2">
             {proposal.title}
-            <span className="text-xs bg-blue-500 text-white rounded-lg py-1 px-1 font-bold ml-2 h-6">
+            <span className="text-xs bg-purple-500 text-white rounded-lg py-1 px-1 font-bold ml-2 h-6">
               Voting Period
             </span>
           </span>
@@ -66,7 +66,7 @@ export const ProposalInvestmentCard: React.FC<Props> = ({
           </span>
           <span className="text-sm">
             Proposer:{" "}
-            <span className="bg-gray-200 text-blue-500 00 p-1 rounded-lg">
+            <span className="bg-gray-200 text-purple-500 00 p-1 rounded-lg">
               {proposal.proposer}
             </span>
           </span>
@@ -81,7 +81,7 @@ export const ProposalInvestmentCard: React.FC<Props> = ({
         </span>
         {!proposal.isPaid && isCompleted && (
           <div
-            className="px-3 py-2 bg-blue-600 text-white font-bold text-center rounded-xl"
+            className="px-3 py-2 bg-purple-600 text-white font-bold text-center rounded-xl"
             onClick={() => {
               setIsOpen(true);
             }}
@@ -102,7 +102,7 @@ export const ProposalInvestmentCard: React.FC<Props> = ({
             </div>
           )}
         {proposal.isPaid && (
-          <span className="text-center font-bold border-2 px-3 py-1 rounded-xl border-blue-600">
+          <span className="text-center font-bold border-2 px-3 py-1 rounded-xl border-purple-600">
             Funds are released to Proposer.
           </span>
         )}
