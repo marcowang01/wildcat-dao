@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+#links for ref
+- [contract](https://learn.figment.io/tutorials/funding-dao-polygon#introduction)
+- [gnosis](https://szewong.medium.com/starting-your-dao-with-gnosis-and-polygon-416691432e66)
+- [contract based gnosis](https://help.gnosis-safe.io/en/articles/5249851-why-can-t-i-transfer-eth-from-a-contract-into-a-safe)
+- need to link to infura
 ## Getting Started
 
 First, run the development server:
